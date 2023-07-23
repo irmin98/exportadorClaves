@@ -1,0 +1,67 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f0f0; /* Cambiamos el fondo del body a gris casi blanco */
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 600px;
+  overflow-y: scroll;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 800px;
+  height: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  padding: 15px;
+  background-color: #2b2d7a; /* Cambiamos el fondo del encabezado a azul rey */
+  color: #fff; /* Cambiamos el color del texto del encabezado a blanco */
+  text-align: left;
+}
+
+thead th {
+  background-color: #2b2d7a; /* Mantenemos el fondo del encabezado azul rey */
+}
+
+tbody {
+  color: #000; /* Cambiamos el color del texto del cuerpo de la tabla a negro */
+}
+
+tbody tr {
+  background-color: #f7f7f7; /* Cambiamos el fondo del cuerpo de la tabla a casi blanco */
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Cambiamos el color del fondo al hacer hover sobre una fila */
+}
+
+tbody td {
+  position: relative;
+}
+
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(0, 0, 0, 0.1); /* Cambiamos el color del fondo al hacer hover sobre una celda */
+  z-index: -1;
+}
